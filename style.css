@@ -1,64 +1,77 @@
 :root {
     --neon: #00ff88;
-    --glass: rgba(18, 18, 18, 0.95);
+    --dark-bg: #0a0a0a;
+    --glass: rgba(255, 255, 255, 0.05);
 }
-
-* { box-sizing: border-box; margin: 0; padding: 0; }
 
 body {
-    background: linear-gradient(rgba(0,0,0,0.85), rgba(0,0,0,0.85)), 
-                url('https://images.unsplash.com/photo-1508098682722-e99c43a406b2?auto=format&fit=crop&w=1350&q=80');
-    background-size: cover; background-attachment: fixed;
-    color: #fff; font-family: 'Segoe UI', sans-serif;
-    padding-top: 80px;
+    background-color: var(--dark-bg);
+    color: white;
+    font-family: 'Segoe UI', sans-serif;
+    margin: 0; padding-top: 80px;
 }
 
-/* الناف بار */
+/* شريط التنقل */
 .navbar {
     position: fixed; top: 0; width: 100%; height: 70px;
-    background: #000; border-bottom: 2px solid var(--neon);
-    display: flex; justify-content: space-between; align-items: center;
-    padding: 0 5%; z-index: 1000;
+    background: rgba(0,0,0,0.95); border-bottom: 2px solid var(--neon);
+    display: flex; align-items: center; justify-content: space-around; z-index: 1000;
 }
 .logo span { color: var(--neon); text-shadow: 0 0 10px var(--neon); }
 .nav-links { display: flex; list-style: none; gap: 20px; }
 .nav-links a { color: #ccc; text-decoration: none; font-size: 14px; }
 .nav-links a.active { color: var(--neon); font-weight: bold; }
 
-/* الحاوية الرئيسية */
-.main-container { display: flex; justify-content: center; padding: 20px; perspective: 1000px; }
-
-.table-3d-card { width: 100%; max-width: 1100px; }
-.table-header { text-align: center; margin-bottom: 25px; text-shadow: 0 0 15px var(--neon); font-size: 22px; }
-
-.glass-table-container {
-    background: var(--glass);
-    border-radius: 20px; border: 1px solid rgba(255,255,255,0.1);
-    padding: 20px; box-shadow: 0 30px 60px rgba(0,0,0,0.8);
-    overflow-x: auto; /* مهم جداً لعرض الـ 20 فريقاً في الجوال */
+/* كروت الـ 3D */
+.main-container { padding: 40px 5%; }
+.matches-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+    gap: 30px;
+    perspective: 1000px; /* تفعيل البعد الثالث */
 }
 
-.standings-table { width: 100%; border-collapse: collapse; min-width: 800px; }
-.standings-table th { color: var(--neon); padding: 15px; border-bottom: 2px solid #333; font-size: 14px; text-align: center; }
-.standings-table td { padding: 12px 8px; border-bottom: 1px solid rgba(255,255,255,0.05); text-align: center; font-size: 15px; }
-
-/* حل مشكلة أستون فيلا والشعارات */
-.team-info { display: flex; align-items: center; gap: 12px; text-align: right !important; padding-right: 20px !important; }
-.team-info img { 
-    width: 30px !important; height: 30px !important; 
-    object-fit: contain; filter: drop-shadow(0 0 5px rgba(255,255,255,0.1));
+.match-card {
+    background: #151515;
+    border-radius: 20px;
+    padding: 25px;
+    border: 1px solid rgba(255,255,255,0.1);
+    transition: transform 0.6s cubic-bezier(0.2, 0.8, 0.2, 1);
+    transform-style: preserve-3d;
 }
-.team-info span { font-weight: 500; white-space: nowrap; }
 
-.points-cell { color: var(--neon); font-weight: 800; font-size: 17px; }
-
-/* تمييز المتصدر والمناطق */
-.leader { background: rgba(0, 255, 136, 0.07); }
-tr:nth-child(-n+4) { border-right: 4px solid var(--neon); } /* تمييز مربع الأبطال */
-tr:nth-last-child(-n+3) { border-right: 4px solid #ff4d4d; } /* تمييز الهبوط */
-
-/* استجابة الجوال */
-@media (max-width: 768px) {
-    body { padding-top: 130px; }
-    .table-header { font-size: 18px; }
+.match-card:hover {
+    transform: rotateY(10deg) rotateX(5deg) translateY(-10px);
+    border-color: var(--neon);
+    box-shadow: 0 20px 40px rgba(0, 255, 136, 0.1);
 }
+
+/* تنسيق الشعارات - حل مشكلة الاختفاء */
+.score-row {
+    display: flex; justify-content: space-between; align-items: center; margin: 25px 0;
+}
+
+.team { display: flex; flex-direction: column; align-items: center; gap: 10px; flex: 1; }
+
+.team img {
+    width: 70px !important; height: 70px !important;
+    object-fit: contain;
+    background: white; /* يضمن ظهور الشعارات الشفافة */
+    border-radius: 12px;
+    padding: 8px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.3);
+}
+
+.score-badge {
+    font-size: 28px; font-weight: 900; color: var(--neon);
+    background: #000; padding: 10px 20px; border-radius: 15px;
+}
+
+/* الأزرار */
+.btn-3d {
+    width: 100%; padding: 12px; border-radius: 10px; border: none;
+    background: var(--neon); color: #000; font-weight: bold;
+    cursor: pointer; transition: 0.3s;
+}
+.btn-3d.outline { background: transparent; border: 1px solid var(--neon); color: var(--neon); }
+.btn-3d:hover { box-shadow: 0 0 20px var(--neon); transform: translateZ(20px); }

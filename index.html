@@ -3,8 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="referrer" content="no-referrer">
-    <title>غزاوي كورة - الرئيسية</title>
+    <title>غزاوي كورة - تجربة 3D</title>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
@@ -17,24 +16,57 @@
         </ul>
     </nav>
 
-    <div class="main-container">
-        <div class="match-card">
-            <header style="color: #888; margin-bottom: 10px;">نصف النهائي - الإياب</header>
-            <h2 style="margin:0">أهم المباريات</h2>
-            <div class="match-teams">
-                <div class="team-box">
-                    <img src="https://upload.wikimedia.org/wikipedia/en/0/0c/Liverpool_FC.svg">
-                    <p>ليفربول</p>
-                </div>
-                <div class="match-score">4 - 0</div>
-                <div class="team-box">
-                    <img src="https://upload.wikimedia.org/wikipedia/en/4/47/FC_Barcelona_%28crest%29.svg">
-                    <p>برشلونة</p>
-                </div>
-            </div>
-            <p style="color: #aaa; font-style: italic;">ليلة المعجزة في أنفيلد</p>
-            <button style="width:100%; padding:12px; background:var(--neon); border:none; border-radius:10px; font-weight:bold; cursor:pointer;">مشاهدة الملخص</button>
+    <div class="ticker-wrap">
+        <div class="ticker">
+            <span class="ticker-item">🌟 جديد: استمتع بتجربة التصفح ثلاثية الأبعاد الحقيقية..</span>
+            <span class="ticker-item">⚽ ريمونتادا الأنفيلد: ليفربول يصعق برشلونة برباعية نظيفة!</span>
         </div>
     </div>
+
+    <main class="main-container">
+        <div class="matches-grid">
+            <div class="card-3d-container">
+                <div class="match-card highlight-card">
+                    <div class="card-content">
+                        <header class="match-meta">نصف النهائي - الإياب</header>
+                        <div class="score-row">
+                            <div class="team">
+                                <img src="https://upload.wikimedia.org/wikipedia/en/thumb/0/0c/Liverpool_FC.svg/300px-Liverpool_FC.svg.png" alt="ليفربول">
+                                <span>ليفربول</span>
+                            </div>
+                            <div class="score-badge win">4 - 0</div>
+                            <div class="team">
+                                <img src="https://upload.wikimedia.org/wikipedia/en/thumb/4/47/FC_Barcelona_%28crest%29.svg/300px-FC_Barcelona_%28crest%29.svg.png" alt="برشلونة">
+                                <span>برشلونة</span>
+                            </div>
+                        </div>
+                        <p class="match-desc">ليلة المعجزة في أنفيلد</p>
+                        <button class="btn-3d">مشاهدة الملخص</button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="card-3d-container">
+                <div class="match-card">
+                    <div class="card-content">
+                        <header class="match-meta">نصف النهائي - الذهاب</header>
+                        <div class="score-row">
+                            <div class="team">
+                                <img src="https://upload.wikimedia.org/wikipedia/en/thumb/4/47/FC_Barcelona_%28crest%29.svg/300px-FC_Barcelona_%28crest%29.svg.png" alt="برشلونة">
+                                <span>برشلونة</span>
+                            </div>
+                            <div class="score-badge">3 - 0</div>
+                            <div class="team">
+                                <img src="https://upload.wikimedia.org/wikipedia/en/thumb/0/0c/Liverpool_FC.svg/300px-Liverpool_FC.svg.png" alt="ليفربول">
+                                <span>ليفربول</span>
+                            </div>
+                        </div>
+                        <p class="match-desc">تألق الساحر ميسي</p>
+                        <button class="btn-3d outline">مشاهدة الملخص</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
 </body>
 </html>
