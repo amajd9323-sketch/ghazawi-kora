@@ -6,6 +6,7 @@
     <meta name="referrer" content="no-referrer">
     <title>غزاوي كورة - الرئيسية</title>
     <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;700&display=swap" rel="stylesheet">
 </head>
 <body>
     <nav class="navbar">
@@ -17,31 +18,36 @@
         </ul>
     </nav>
 
-    <div class="ticker-wrap">
-        <div class="ticker">
-            <span class="ticker-item">⚽ ريمونتادا الأنفيلد: ليفربول يصعق برشلونة برباعية نظيفة!</span>
-            <span class="ticker-item">🌟 جديد: استمتع بتجربة التصفح ثلاثية الأبعاد الحقيقية..</span>
-        </div>
-    </div>
+    <main class="hero-section">
+        <div class="container">
+            <h2 class="section-title">إياب نصف النهائي</h2>
+            <h1 class="main-title">أهم المباريات</h1>
 
-    <main class="main-container">
-        <div class="matches-grid">
-            <div class="match-card">
-                <header style="color:var(--text-gray)">نصف النهائي - الإياب</header>
-                <div class="score-row">
-                    <div class="team">
-                        <img src="https://upload.wikimedia.org/wikipedia/en/0/0c/Liverpool_FC.svg" alt="ليفربول">
-                        <span>ليفربول</span>
-                    </div>
-                    <div class="score-badge">4 - 0</div>
+            <div class="match-card-3d">
+                <div class="teams-container">
                     <div class="team">
                         <img src="https://upload.wikimedia.org/wikipedia/en/4/47/FC_Barcelona_%28crest%29.svg" alt="برشلونة">
-                        <span>برشلونة</span>
+                        <h3>برشلونة</h3>
+                    </div>
+                    
+                    <div class="score-box">
+                        <span class="score">0 - 4</span>
+                    </div>
+
+                    <div class="team">
+                        <img src="https://upload.wikimedia.org/wikipedia/en/0/0c/Liverpool_FC.svg" alt="ليفربول">
+                        <h3>ليفربول</h3>
                     </div>
                 </div>
-                <button class="btn-3d">مشاهدة الملخص</button>
+                
+                <p class="match-desc">ليلة المعجزة في أنفيلد</p>
+                <button class="btn-3d" onclick="window.location.href='https://www.youtube.com/results?search_query=liverpool+vs+barcelona+4-0+highlights'">مشاهدة الملخص</button>
             </div>
         </div>
     </main>
+
+    <footer class="footer">
+        <p>تجربة التصفح ثلاثية الأبعاد الحقيقية.. جميع الحقوق محفوظة لـ غزاوي كورة</p>
+    </footer>
 </body>
 </html>
