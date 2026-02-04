@@ -1,17 +1,35 @@
-:root { --neon: #00ff88; --bg: #0d0d0d; }
+:root { --neon: #00ff88; --bg: #0a0a0a; }
 
-body { background: var(--bg); color: white; font-family: sans-serif; margin: 0; padding-top: 80px; direction: rtl; }
+body { 
+    background: var(--bg); 
+    color: white; 
+    font-family: 'Segoe UI', sans-serif; 
+    margin: 0; 
+    padding-top: 80px; 
+    direction: rtl; 
+}
 
 /* حل مشكلة الشعارات وتداخلها */
 img { 
-    width: 35px; height: 35px; background: white; 
-    border-radius: 6px; padding: 2px; object-fit: contain; 
+    width: 35px; 
+    height: 35px; 
+    background: white; 
+    border-radius: 6px; 
+    padding: 2px; 
+    object-fit: contain; 
 }
 
 .navbar { 
-    position: fixed; top: 0; width: 100%; height: 70px; background: #000;
-    display: flex; justify-content: space-around; align-items: center; 
-    border-bottom: 2px solid var(--neon); z-index: 1000;
+    position: fixed; 
+    top: 0; 
+    width: 100%; 
+    height: 70px; 
+    background: #000; 
+    display: flex; 
+    justify-content: space-around; 
+    align-items: center; 
+    border-bottom: 2px solid var(--neon); 
+    z-index: 1000; 
 }
 
 .logo span { color: var(--neon); text-shadow: 0 0 10px var(--neon); font-size: 24px; }
@@ -25,15 +43,18 @@ img {
 .stats-table td { padding: 12px; border-bottom: 1px solid #222; text-align: center; }
 .team-cell { display: flex; align-items: center; gap: 10px; justify-content: flex-start; padding-right: 20px; }
 
-/* تنسيق بطاقات المباريات 3D */
+/* تنسيق بطاقات المباريات 3D لمنع التداخل */
 .match-card { 
-    background: #1a1a1a; width: 350px; padding: 25px; border-radius: 20px;
-    border: 1px solid rgba(0,255,136,0.2); text-align: center;
-    transition: 0.4s; transform-style: preserve-3d; margin: auto;
+    background: #1a1a1a; 
+    width: 350px; 
+    padding: 25px; 
+    border-radius: 20px; 
+    border: 1px solid rgba(0,255,136,0.2); 
+    text-align: center; 
+    transition: 0.4s; 
+    margin: auto; 
 }
-.match-card:hover { transform: rotateY(10deg) translateY(-10px); border-color: var(--neon); }
 .match-teams { display: flex; justify-content: space-between; align-items: center; margin: 20px 0; }
 .team-box { display: flex; flex-direction: column; align-items: center; gap: 10px; flex: 1; }
 .team-box img { width: 60px; height: 60px; }
 .match-score { font-size: 28px; font-weight: bold; color: var(--neon); }
-.btn-watch { width: 100%; padding: 12px; background: var(--neon); border: none; border-radius: 10px; font-weight: bold; cursor: pointer; }
