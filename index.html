@@ -1,12 +1,12 @@
 <!DOCTYPE html>
 <html lang="ar" dir="rtl">
 <head>
-    <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;700&display=swap" rel="stylesheet">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>غزاوي كورة - تجربة 3D</title>
+    <meta name="referrer" content="no-referrer">
+    <title>غزاوي كورة | عالم الكرة بين يديك</title>
     <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;700&display=swap" rel="stylesheet">
 </head>
 <body>
     <nav class="navbar">
@@ -14,60 +14,27 @@
         <ul class="nav-links">
             <li><a href="index.html" class="active">الرئيسية</a></li>
             <li><a href="table.html">ترتيب الدوريات</a></li>
-            <li><a href="news.html">الأخبار</a></li>
         </ul>
     </nav>
 
-    <div class="ticker-wrap">
-        <div class="ticker">
-            <span class="ticker-item">🌟 جديد: استمتع بتجربة التصفح ثلاثية الأبعاد الحقيقية..</span>
-            <span class="ticker-item">⚽ ريمونتادا الأنفيلد: ليفربول يصعق برشلونة برباعية نظيفة!</span>
-        </div>
-    </div>
-
-    <main class="main-container">
-        <div class="matches-grid">
-            <div class="card-3d-container">
-                <div class="match-card highlight-card">
-                    <div class="card-content">
-                        <header class="match-meta">نصف النهائي - الإياب</header>
-                        <div class="score-row">
-                            <div class="team">
-                                <img src="https://upload.wikimedia.org/wikipedia/en/thumb/0/0c/Liverpool_FC.svg/300px-Liverpool_FC.svg.png" alt="ليفربول">
-                                <span>ليفربول</span>
-                            </div>
-                            <div class="score-badge win">4 - 0</div>
-                            <div class="team">
-                                <img src="https://upload.wikimedia.org/wikipedia/en/thumb/4/47/FC_Barcelona_%28crest%29.svg/300px-FC_Barcelona_%28crest%29.svg.png" alt="برشلونة">
-                                <span>برشلونة</span>
-                            </div>
-                        </div>
-                        <p class="match-desc">ليلة المعجزة في أنفيلد</p>
-                        <button class="btn-3d">مشاهدة الملخص</button>
-                    </div>
+    <main class="main-content">
+        <h2 style="color: var(--neon-green)">أهم نتائج البطولات</h2>
+        
+        <div class="match-card">
+            <p>دوري أبطال أوروبا - إياب</p>
+            <div class="teams-row">
+                <div class="team">
+                    <img src="https://upload.wikimedia.org/wikipedia/en/0/0c/Liverpool_FC.svg" alt="ليفربول">
+                    <p>ليفربول</p>
+                </div>
+                <div class="score">4 - 0</div>
+                <div class="team">
+                    <img src="https://upload.wikimedia.org/wikipedia/en/4/47/FC_Barcelona_%28crest%29.svg" alt="برشلونة">
+                    <p>برشلونة</p>
                 </div>
             </div>
-
-            <div class="card-3d-container">
-                <div class="match-card">
-                    <div class="card-content">
-                        <header class="match-meta">نصف النهائي - الذهاب</header>
-                        <div class="score-row">
-                            <div class="team">
-                                <img src="https://upload.wikimedia.org/wikipedia/en/thumb/4/47/FC_Barcelona_%28crest%29.svg/300px-FC_Barcelona_%28crest%29.svg.png" alt="برشلونة">
-                                <span>برشلونة</span>
-                            </div>
-                            <div class="score-badge">3 - 0</div>
-                            <div class="team">
-                                <img src="https://upload.wikimedia.org/wikipedia/en/thumb/0/0c/Liverpool_FC.svg/300px-Liverpool_FC.svg.png" alt="ليفربول">
-                                <span>ليفربول</span>
-                            </div>
-                        </div>
-                        <p class="match-desc">تألق الساحر ميسي</p>
-                        <button class="btn-3d outline">مشاهدة الملخص</button>
-                    </div>
-                </div>
-            </div>
+            <p>ريمونتادا تاريخية في أنفيلد</p>
+            <button class="btn-action" onclick="window.open('https://www.youtube.com', '_blank')">مشاهدة الأهداف</button>
         </div>
     </main>
 </body>
